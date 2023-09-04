@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   gocqhttp:
-    image: silicer/go-cqhttp:latest
+    image: emersonksc/cqhttp:latest
     restart: always
     environment:
       LANG: 'C.UTF-8'

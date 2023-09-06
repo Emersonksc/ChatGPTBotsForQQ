@@ -7,6 +7,8 @@ services:
       LANG: 'C.UTF-8'
     volumes:
       - ./gocqhttp/:/data/
+    stdin_open: true
+    tty: true
   chatgpt:
     image: lss233/chatgpt-mirai-qq-bot:browser-version
     restart: always
@@ -16,7 +18,9 @@ services:
       - ./config.cfg:/app/config.cfg
       - ./data:/app/data
       - ./presets:/app/presets
-      # - ./fonts:/app/fonts # 如果你想自定义字体，就解除注释
+      # - ./fonts:/app/fonts # 如果你想自定义字体，就解除注释\
+    stdin_open: true
+    tty: true
   watchtower: # [可选] 自动更新
     image: containrrr/watchtower
     volumes: # 如果启动失败，请修改下面这条：
@@ -26,4 +30,6 @@ services:
     restart: always
     environment:
       LANG: 'C.UTF-8'
+    stdin_open: true
+    tty: true
 

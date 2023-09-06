@@ -1,0 +1,1 @@
+Start with Commands |bash -c "$(wget -O- https://raw.githubusercontent.com/Emersonksc/ChatGPTBotsForQQ/master/setup.sh)"

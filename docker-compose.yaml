@@ -27,9 +27,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
   qsign: # 签名服务
     image: emersonksc/qsign:latest
+    command: ["java", "-jar", "unidbg-fetch-qsign-all.jar", "--basePath=./txlib/8.9.63"]
     restart: always
     environment:
       LANG: 'C.UTF-8'
-    stdin_open: true
+    stdin_open: false
     tty: true
 
